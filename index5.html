@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //JSON--Javascript Object Notation
+      let empobj = {
+        firstName: "Shreya",
+        lastName: "Tr",
+
+        //functions
+        getFullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+        address: {
+          doorNumber: 101,
+          areaName: "UPPAL",
+          cityName: "Hyderabad",
+        },
+      };
+      empobj.mobile = "7799331205";
+      if (empobj.hasOwnProperty("mobile")) {
+        empobj.mobile = "9849532228";
+      }
+      empobj.mobile = "9849532228";
+      console.log(empobj);
+      document.write("<h1>First Name: " + empobj.firstName);
+      document.write("<h1>Last Name :" + empobj["lastName"]);
+      document.write("<h1>Full Name is " + empobj.getFullName());
+      document.write("<h1>Address Details...");
+      document.write("<h1>Door Number is" + empobj.address.doorNumber);
+      document.write("<h1>Area Name is " + empobj.address.areaName);
+      document.write("<h1>City Name is " + empobj.address.cityName);
+      document.write("<h1>Mobile Number:" + empobj.mobile);
+    </script>
+  </body>
+</html>
